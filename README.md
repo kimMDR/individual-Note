@@ -1,4 +1,4 @@
-멘토님이 주신 자료 중에서 github에 어떤걸 클론해서 실습해볼 수 있는지 모르겠길래 옆건물 혜수네 노트정리 보면서 따라해봤습니다
+![image](https://github.com/user-attachments/assets/0427cd21-b830-4800-8937-1c5e1b671fe3)멘토님이 주신 자료 중에서 github에 어떤걸 클론해서 실습해볼 수 있는지 모르겠길래 옆건물 혜수네 노트정리 보면서 따라해봤습니다
 
 (+혜수 짱이다)
 
@@ -62,21 +62,20 @@
 
 ## Kibana 입성하기
 
-이렇게 `sudo docker-compose up -d` 명령어로 docker compose할 수 있다고 멘토님 github에 친절하게 쓰여있음 음하학
+멘토님 깃허브 들어가보면 `sudo docker-compose up -d` 명령어로 docker compose할 수 있다고 멘토님 github에 친절하게 쓰여있음 음하학
 
-![image.png](attachment:13472b78-eeca-49c8-b6c1-4de130f90e01:image.png)
 
-이렇게 github clone하는 중
+
+아래 명령어로 github clone하는 중
 
 ```bash
 git clone https://github.com/gunh0/whs-utils.git
 ```
 
+깃클론 끝나면 아래 경로로 들어가서 docker-compose할거임
 ```jsx
 cd ~/ELK/whs-utils/simple_elk_for_siem/basic-elk
 ```
-
-![image.png](attachment:36f0d783-f113-4933-a30c-164a4fa6eedb:image.png)
 
 localhost:5601으로 들어와서 로그인 완료함
 
@@ -86,18 +85,10 @@ ID: elastic
 PW: p@ssw0rd1234
 ```
 
-![image.png](attachment:f6a4d3c7-7c5a-4a5b-8102-3b032fc0df38:image.png)
-
-Explore on my own 버튼을 누를건데 이건 
+elk들어와서 Explore on my own 버튼을 누를건데 이건 
 자동 데이터 수집 설정 없이 수동으로 Kibana 탐색을 시작하겠다는 의미임
 
-![image.png](attachment:a599c18b-a148-45d4-9f95-c3ec9d3d153c:image.png)
-
-Kibana 입성
-
-![image.png](attachment:8884d7a2-d7cf-4da1-8e4e-18e8f5320249:image.png)
-
-메뉴 설명~
+Kibana 입성하면 뜨는 메뉴 설명~
 
 **Enterprise Search** : 기업 맞춤형 검색 기능을 만들 수 있음
 
@@ -109,29 +100,22 @@ Kibana 입성
 
 ## sample web logs 추가하기
 
-밑줄 친 부분인 Try sample data를 눌러서 들어가봅니다
+메인(홈)에서 보이는 Try sample data를 눌러서 들어가봅니다
 
-![image.png](attachment:dbaf3a3c-d8f5-4beb-90de-e11eba622629:image.png)
 
-그럼 이렇게 돼 있는데 other sample data sets을 누르면 다른 다양한 데이터 추가 가능
+other sample data sets을 누르면 다른 다양한 데이터 추가 가능
 
-![image.png](attachment:6e7f5f98-0a33-4480-913f-c8311365fc94:image.png)
 
-이렇게 세 개임 이 중에서 Sample seb logs를  install 할거임
+들어오면 선택지 세 개가 보이는데 이 중에서 Sample seb logs를  install 할거임
 
-![image.png](attachment:da8e8c94-906f-4add-a855-5ecf6f2623a3:image.png)
-
-![image.png](attachment:99534581-d73e-4976-8f78-de8486ed91d4:image.png)
 
 ## 메뉴에서 Discover들어가서 logs확인
 
 Sample Web logs를 추가한 뒤 메뉴바에서 Discover로 들어가보면 
 
-이렇게 로그들을 확인할 수 있습니다
+로그들을 확인할 수 있습니다
 
-![image.png](attachment:c856ff03-e12e-4c46-9036-f397a5984cef:image.png)
-
-도대체 이 로그들이 뭘 찍어내서 보여주는건지 궁금해서
+도대체 이 로그들이 뭘 찍어내서 보여주는건지 궁금해서 뭐냐면
 
 | 필드명 | 의미 |
 | --- | --- |
@@ -176,10 +160,6 @@ Sample Web logs를 추가한 뒤 메뉴바에서 Discover로 들어가보면
 
 그럼 이렇게 web Traffic을 확인할 수 있어요. 들어가보면,
 
-![image.png](attachment:c761bc41-c406-4712-ba83-52e7056cba0c:image.png)
-
-![image.png](attachment:fbfa9bea-dae2-4947-aca9-c05f65b87bd8:image.png)
-
 | 위치 | 의미 |
 | --- | --- |
 | **1613 Visits** | 지난 7일 동안 총 1,613번의 웹 요청 
@@ -204,17 +184,13 @@ Sample Web logs를 추가한 뒤 메뉴바에서 Discover로 들어가보면
 
 들어와서 오른쪽 상단에 있는 create visualization 눌러서 만들어보자
 
-![image.png](attachment:7961ed27-fdb3-4901-b839-bb2c61963ee7:image.png)
-
 Lens클릭
 
 (drag&drop으로 간단하게 내가 원하는 필드를 시각화 할 수 있는 메뉴)
 
-![image.png](attachment:6d6a5735-bfa6-4f48-8787-e500c2b50122:image.png)
 
 들어와서 Bar certical stacked → Area로 변경
 
-![image.png](attachment:3f659159-02ff-45eb-a53e-60aed9dcb70d:image.png)
 
 `Horizontal axis`칸에 ← `@timestamp` 필드 삽입
 
@@ -222,17 +198,12 @@ Lens클릭
 
 [시각화]
 
-![image.png](attachment:4b279213-199b-45a6-afb9-da2b5d5ec11f:image.png)
-
 오른쪽 상단에 있는 Save를 누르고 타이틀 입력해서 시각화 생성해봤음
-
-![image.png](attachment:77db12db-9433-4da4-878f-ba09cf2973a5:image.png)
 
 ## 이번에는 (https://localhost:9200)에 접속해볼게용
 
-그냥 접속하려고 하니까 방화벽에서 막히길래 기본 보호 → 끄기로 바뀐 뒤 접속했음
+그냥 접속하려고 하니까 방화벽에서 막히길래 설정 들어가서 기본 보호 → 끄기로 바뀐 뒤 접속했음
 
-![image.png](attachment:cdd5ed66-0bf1-43c5-870c-b0b9f4a9c163:image.png)
 
 사이트에 입성하려면 로그인 필요
 
@@ -240,17 +211,13 @@ ID: `elastic`
 
 PW: `p@ssw0rd1234` 
 
-![image.png](attachment:052388fc-6101-47d5-9cc7-62bc4cc1ce15:image.png)
-
 (https://localhost:9200)입성
 
-![image.png](attachment:3a19e299-ec3f-4b22-95b0-5a76638c981d:image.png)
 
 kibana에서 Elasticsearch에 명령을 직접 날릴 수 있다고 하네요 해봅시다
 
 기본 kibana 메인 화면에서 `Management`의 `Dev Tools`로 들어가
 
-![image.png](attachment:57963637-9cc0-44d3-98a2-5025cb22ca34:image.png)
 
 들어오면 Console에 명령어 입력이 가능한데 이거 입력할거
 
@@ -264,7 +231,6 @@ GET _cat/indices?v
 # 명령어 치고 난 다음에 request버튼 눌러서 실행
 ```
 
-![image.png](attachment:f2e766e0-f599-46d2-a8bf-458710af0727:image.png)
 
 ```bash
 	*기존에 써있던 명령어
@@ -279,7 +245,6 @@ GET _cat/indices?v
 
 나는 왤캐 찔끔 뜨냐
 
-![image.png](attachment:da278851-0a08-4032-8b39-99c2aee0a473:image.png)
 
 인덱스 값 말고도 모든 값을 보고싶을 때는 아래와 같이 치면 된다고 합니
 
@@ -291,7 +256,3 @@ GET _search
   }
 }
 ```
-
-![image.png](attachment:8240e715-3d54-4c52-88b9-4dedad1bebea:image.png)
-
-오호오호
